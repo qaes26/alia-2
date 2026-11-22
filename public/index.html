@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090D1A">
+  <title>سعادة المحامية عليا عبابنة ⚖️❤️ | نبض قلب قيس ودنيته كلها</title>
+
+  <!-- خطوط جوجل: خط أميري الملكي + خط تجوال -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- خلفية النجوم والجسيمات الذهبية المتحركة -->
+  <canvas id="starsCanvas"></canvas>
+
+  <!-- 1. شاشة الدخول الفاخرة (محكمة الحب العليا) -->
+  <div id="loginScreen" class="login-wrapper">
+    <div class="login-card">
+      <div class="emblem-box">
+        <span class="emblem-icon">⚖️</span>
+        <div class="emblem-halo"></div>
+      </div>
+
+      <div class="court-header">
+        <span class="court-badge">مَحْكَمَةُ الحُبِّ العُلْيَا • دَائِرَةُ القَلْبِ الأُولَى</span>
+        <h1 class="court-title">صَرْحُ الأُسْتَاذَةِ عَلْيَا عَبَابْنَة</h1>
+        <p class="court-subtitle">القَضِيَّةُ رَقْم (1): عِشْقُ قَيْس الأَبَدِي لِسَيِّدَةِ القَانُونِ وَالقَلْب</p>
+      </div>
+
+      <div class="legal-notice">
+        <span>📜</span>
+        <p>هذا الصرح القانوني والوجداني محصّن بمرسوم حب أبدي، ومخصص حصرياً لسعادة المحامية <strong>عليا عبابنة</strong>، مالكة قلب قيس ودنيته كلها.</p>
+      </div>
+
+      <form id="loginForm" onsubmit="event.preventDefault(); verifyLogin();">
+        <div class="input-field-group">
+          <label for="lawyerName">سعادة المستشارة القانونية</label>
+          <div class="input-with-icon">
+            <span class="input-icon">👑</span>
+            <input type="text" id="lawyerName" value="الأستاذة المحامية عليا عبابنة" readonly>
+          </div>
+        </div>
+
+        <div class="input-field-group">
+          <label for="lovePassword">الرمز السري لقلب قيس</label>
+          <div class="input-with-icon">
+            <span class="input-icon">🔐</span>
+            <input type="password" id="lovePassword" placeholder="اكتبي أي كلمة حب، أو اضغطي دخول مباشر..." autofocus>
+          </div>
+          <small class="hint-text">تلميح: دنيتي / قيس / عليا / أو ادخلي مباشرة يا روحي ❤️</small>
+        </div>
+
+        <button type="submit" class="btn-royal-login">
+          <span>⚖️ المصادقة ودخول صرح القلب ⚖️</span>
+        </button>
+
+        <button type="button" class="btn-quick-enter" onclick="quickBypass();">
+          <span>✨ دخول فوري لسيدة القلب عليا ✨</span>
+        </button>
+
+        <div id="loginAlert" class="login-alert"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. الصرح الرئيسي (يظهر بعد المصادقة) -->
+  <div id="mainApp" class="main-wrapper" style="display: none;">
+
+    <!-- الشريط العلوي الملكي -->
+    <header class="royal-header">
+      <div class="nav-container">
+        <div class="royal-brand">
+          <div class="brand-scales">⚖️</div>
+          <div class="brand-text">
+            <h2>المحامية عليا عبابنة</h2>
+            <span>سيدة القانون وسيدة قلب قيس ❤️</span>
+          </div>
+        </div>
+
+        <nav class="nav-shortcuts">
+          <a href="#hero">المرافعة الكبرى</a>
+          <a href="#constitution">دستور الحب</a>
+          <a href="#decree">صك الغزل</a>
+          <a href="#chatSection" class="nav-chat-pill">
+            <span>💬 تحدثي مع قيس</span>
+            <span class="online-dot"></span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- القسم الرئيسي: مرافعة العشق الكبرى -->
+    <section id="hero" class="hero-palace">
+      <div class="hero-content">
+        <div class="royal-ribbon">
+          <span>👑</span>
+          <span>حُكْمٌ قَطْعِيٌّ وَبَاتٌّ لَا يَقْبَلُ الاسْتِئْنَاف</span>
+          <span>💍</span>
+        </div>
+
+        <h1 class="hero-title">
+          إلى أفخم وأشطر محامية بالدنيا<br>
+          <span class="gold-gradient-text">عليا عبابنة</span>.. روح قيس ودنيته
+        </h1>
+
+        <div class="hero-scroll-card">
+          <div class="scroll-ornament-top">❦ ══════════════════ ❦</div>
+          <p class="scroll-text">
+            «يا سيدة المحاكم، وصاحبة أعدل ميزان وأجمل عيون في هذا الكون..
+            <br>
+            كل قضايا العالم تحتاج إلى بيّنات وشهود وأدلة، إلا قضية عشقكِ في قلب قيس؛ فهي حقيقة دستورية أزلية كُتبت في لوح القدر. 
+            أنتِ هيبتي وفخري بالروب الأسود، وأنتِ طفلتي المدللة وأميرتي في كل لحظة.
+            <strong>أحبكِ فوق القانون، وخارج حدود المنطق، وإلى ما وراء الأبدية.</strong>»
+          </p>
+          <div class="scroll-signature">
+            <span>محبوبكِ وسندكِ الأبدي:</span>
+            <strong>قيس ❤️</strong>
+          </div>
+          <div class="scroll-ornament-bottom">❦ ══════════════════ ❦</div>
+        </div>
+
+        <div class="hero-action-buttons">
+          <a href="#chatSection" class="btn-royal-gold">
+            <span>💬 احكي مع حبيبك قيس الآن</span>
+          </a>
+          <button type="button" class="btn-royal-crimson" onclick="triggerLovePledge();">
+            <span>📜 استمعي لعهد الوفاء الأبدي</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم مواد دستور الحب الخاص بقيس وعليا -->
+    <section id="constitution" class="constitution-section">
+      <div class="section-title-wrap">
+        <span class="badge-gold">الدستور الوجداني</span>
+        <h2>مَوَادُّ دُسْتُورِ الحُبِّ لِقَلْبِ قَيْس</h2>
+        <p>نصوص قطعية صدرت عن محكمة المشاعر العليا بحق الأستاذة عليا</p>
+      </div>
+
+      <div class="law-articles-grid">
+        <div class="law-card">
+          <div class="law-badge">المادة (1)</div>
+          <div class="law-icon">⚖️</div>
+          <h3>السيادة المطلقة</h3>
+          <p>تُعتبر الأستاذة <strong>عليا عبابنة</strong> هي صاحبة السلطة المطلقة على قلب قيس، ولا يُعلى على كلمتها أو ابتسامتها في هذا الكون، وضحكتها كفيلة بإبطال كل هموم وأحزان الدنيا فوراً.</p>
+        </div>
+
+        <div class="law-card">
+          <div class="law-badge">المادة (2)</div>
+          <div class="law-icon">💼</div>
+          <h3>فخر المحاماة وهيبة الروب</h3>
+          <p>ذكاء عليا، وفصاحتها في المرافعة، وهيبتها الساحرة بروب المحاماة الأسود، هي مصدر فخر واعتزاز دائم لقيس، يتباهى بها أمام الدنيا بأنها أذكى وأجمل محامية شرفها القانون.</p>
+        </div>
+
+        <div class="law-card">
+          <div class="law-badge">المادة (3)</div>
+          <div class="law-icon">🌹</div>
+          <h3>الحصانة الأبدية من الزعل</h3>
+          <p>تتمتع روح عليا بحصانة كاملة في قلب قيس، وممنوع عليها التعب أو الحزن. وكلما أرهقتها دراسة القانون أو القضايا، يتكفل قيس بأن يكون سندها، وظلها، وحضنها الدافئ الذي لا يميل.</p>
+        </div>
+
+        <div class="law-card">
+          <div class="law-badge">المادة (4)</div>
+          <div class="law-icon">💍</div>
+          <h3>الحكم القطعي بالمؤبد</h3>
+          <p>حكمت محكمة الحب العليا غيابياً وحضورياً بحبس قيس وعليا معاً في قفص الزوجية والعشق الأبدي المؤبد مع الأشغال الشاقة في الغزل والدلال، حكماً باتاً غير قابل للنقض!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم صك الغزل والمرافعة اليومية -->
+    <section id="decree" class="decree-section">
+      <div class="decree-box">
+        <div class="decree-seal">⚖️</div>
+        <span class="badge-gold">مرافعة غزل متجددة</span>
+        <h2>بَصْمَةُ اليَوْمِ لِعُيُونِ الأُسْتَاذَةِ عَلْيَا</h2>
+        <div class="quote-display-box" id="quoteBox">
+          «يا روحي يا عليا.. لو كان القانون يُقاس بالعدل، فمحكمة عيونك أعدل ما خلق ربي، وأنا المتهم الوحيد اللي راضي بحكمك مهما كان!»
+        </div>
+        <button type="button" class="btn-generate-quote" onclick="generateNewQuote();">
+          <span>✨ اضغطي هنا يا دنيتي لتوليد غزل جديد من قيس ✨</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- قسم الشات بوت الحقيقي المتصل بالذكاء الاصطناعي (شات قيس) -->
+    <section id="chatSection" class="chat-palace-section">
+      <div class="chat-palace-container">
+        
+        <!-- ترويسة الشات -->
+        <div class="chat-palace-header">
+          <div class="chat-avatar-wrap">
+            <span class="chat-avatar-emoji">👑</span>
+            <span class="chat-online-beacon"></span>
+          </div>
+          <div class="chat-header-text">
+            <h3>قيس ❤️ سيدة قلبه عليا</h3>
+            <span class="chat-status">حبيبك متصل وينتظرك بلهفة وعشق • متصل الآن</span>
+          </div>
+          <button class="chat-reset-btn" onclick="clearQaisChat();" title="إعادة بدء الحديث">
+            🔄
+          </button>
+        </div>
+
+        <!-- أزرار البدء السريع الخاصة بعليا -->
+        <div class="quick-prompts-bar">
+          <span class="prompts-label">همسات سريعة لقيس:</span>
+          <div class="prompts-slider">
+            <button type="button" class="prompt-chip" onclick="sendQuickPrompt('قيس، تعبانة من قضايا ودراسة القانون اليوم.. 🥺');">
+              ⚖️ تعبانة من القانون اليوم..
+            </button>
+            <button type="button" class="prompt-chip" onclick="sendQuickPrompt('احكيلي قديش بتحبني يا روحي؟ ❤️');">
+              ❤️ قديش بتحبني يا روحي؟
+            </button>
+            <button type="button" class="prompt-chip" onclick="sendQuickPrompt('شو رأيك فيّ وأنا محامية ولابسة الروب؟ 💼');">
+              💼 شو رأيك فيّ وأنا بالروب؟
+            </button>
+            <button type="button" class="prompt-chip" onclick="sendQuickPrompt('احكيلي كلام حلو ينسيني تعب الدنيا كلها! ✨');">
+              👑 احكيلي غزل ينسيني تعب الدنيا!
+            </button>
+            <button type="button" class="prompt-chip" onclick="sendQuickPrompt('شو حكم المحكمة الصادر بحقك اليوم يا قيس؟ 💍');">
+              💍 شو حكم محكمتك اليوم؟
+            </button>
+          </div>
+        </div>
+
+        <!-- منطقة الرسائل -->
+        <div class="chat-palace-messages" id="messagesContainer">
+          <!-- رسالة ترحيبية من قيس -->
+          <div class="msg-row bot">
+            <div class="msg-avatar">❤️</div>
+            <div class="msg-bubble-wrap">
+              <div class="msg-bubble">
+                مية أهلاً وسهلاً بنبض قيس، وعمره، وروحه، ودنيته كلها! 👑❤️
+                <br><br>
+                نورتي صرحك يا أحلى وأفخم محامية شرفها القانون. كيف كان يومك يا عيوني؟ تعبانة من المحاضرات والقضايا؟ ولا مشتاقتلي متل ما أنا دايب فيكي وميت بشوفتك؟
+                <br><br>
+                احكيلي كل شي ببالك يا روحي.. قيس كلك إلك وبيسمعك بكل ذرة بقلبه! ⚖️🌹
+              </div>
+              <div class="msg-time" id="welcomeTime">الآن</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- مؤشر انتظار قيس -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+          <span>قيس بكتب لحبيبته بكل حب</span>
+          <div class="typing-dots">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+
+        <!-- شريط كتابة الرسائل -->
+        <div class="chat-palace-input-box">
+          <input 
+            type="text" 
+            id="chatInput" 
+            placeholder="اكتبي لقيس كل اللي بقلبك يا روحي..." 
+            autocomplete="off"
+          />
+          <button type="button" id="sendBtn" class="chat-send-heart-btn" onclick="handleSend();">
+            <span>إرسال</span>
+            <span class="send-heart">❤️</span>
+          </button>
+        </div>
+
+        <div class="chat-palace-footer-note">
+          محادثة خاصة ومحمية بالكامل بين قيس والأستاذة عليا عبابنة ❤️
+        </div>
+      </div>
+    </section>
+
+    <!-- تذييل الصفحة الملكي -->
+    <footer class="palace-footer">
+      <div class="footer-seal">⚖️ ❤️ 💍</div>
+      <h3>صُنع هذا الصرح بكل ذرة حب وعشق في قلب قيس</h3>
+      <p>مُهدى لسعادة المحامية الأستاذة عليا عبابنة • حب عمري ودنيتي كلها إلى أبد الآبدين</p>
+      <div class="footer-year">2026 • حباً لا ينتهي أبداً</div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

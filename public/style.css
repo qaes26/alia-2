@@ -1,0 +1,1087 @@
+/* ==========================================================================
+   صرح المحامية الأستاذة عليا عبابنة - نبض قلب قيس ودنيته
+   التنسيقات الملكية الفاخرة (style.css)
+   طابع ملكي قانوني فخم: أزرق ملكي داكن، مخملي قرمزي، وذهب خالص
+   ========================================================================== */
+
+:root {
+  --bg-deep: #080C18;
+  --bg-card: #0F172B;
+  --bg-glass: rgba(15, 23, 43, 0.78);
+  --gold-primary: #D4AF37;
+  --gold-light: #FCE897;
+  --gold-dark: #9A7718;
+  --gold-gradient: linear-gradient(135deg, #FDE68A 0%, #D4AF37 50%, #9A7718 100%);
+  --crimson: #8C1127;
+  --crimson-light: #C02646;
+  --crimson-gradient: linear-gradient(135deg, #A81332 0%, #6E081D 100%);
+  --text-pure: #FFFFFF;
+  --text-gold: #F7E7A9;
+  --text-muted: #9CA8C4;
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-glow: 0 0 25px rgba(212, 175, 55, 0.25);
+  --font-royal: 'Amiri', serif;
+  --font-main: 'Tajawal', sans-serif;
+  --radius-xl: 28px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-pure);
+  line-height: 1.7;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* خلفية النجوم والجسيمات */
+#starsCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   1. شاشة الدخول الفاخرة (محكمة الحب العليا)
+   ========================================================================== */
+.login-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+  background: radial-gradient(circle at center, #131E38 0%, #060913 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(14, 22, 42, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--border-gold);
+  border-radius: var(--radius-xl);
+  padding: 38px 32px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), var(--border-glow);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: card-appear 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.emblem-box {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px auto;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+.emblem-icon {
+  font-size: 38px;
+}
+
+.court-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--text-gold);
+  border: 1px solid var(--border-gold);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.court-title {
+  font-family: var(--font-royal);
+  font-size: 27px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.court-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.legal-notice {
+  background: rgba(140, 17, 39, 0.22);
+  border: 1px solid rgba(192, 38, 70, 0.4);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  text-align: right;
+  font-size: 13px;
+  color: #F8D7DA;
+  line-height: 1.6;
+}
+
+.legal-notice span {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.input-field-group {
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.input-field-group label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-gold);
+  margin-bottom: 7px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  right: 14px;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 13px 44px 13px 16px;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-md);
+  background: rgba(7, 11, 22, 0.7);
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-with-icon input:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.3);
+}
+
+.hint-text {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 5px;
+}
+
+.btn-royal-login {
+  width: 100%;
+  background: var(--gold-gradient);
+  color: #121829;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+  margin-top: 10px;
+}
+
+.btn-royal-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+.btn-quick-enter {
+  width: 100%;
+  background: rgba(140, 17, 39, 0.3);
+  color: #FFB3C1;
+  border: 1px dashed var(--crimson-light);
+  padding: 11px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.25s ease;
+}
+
+.btn-quick-enter:hover {
+  background: rgba(140, 17, 39, 0.6);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.login-alert {
+  display: none;
+  margin-top: 14px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.login-alert.success {
+  display: block;
+  background: rgba(46, 125, 50, 0.25);
+  border: 1px solid #4CAF50;
+  color: #A5D6A7;
+}
+
+/* ==========================================================================
+   2. التطبيق والصرح الملكي الرئيسي
+   ========================================================================== */
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 0.8s ease forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* شريط الملاحة الملكي */
+.royal-header {
+  position: sticky;
+  top: 0;
+  background: rgba(8, 12, 24, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-gold);
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.royal-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-scales {
+  font-size: 32px;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+}
+
+.brand-text h2 {
+  font-family: var(--font-royal);
+  font-size: 20px;
+  font-weight: 700;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.brand-text span {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.nav-shortcuts {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-shortcuts a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-gold);
+  padding: 6px 4px;
+}
+
+.nav-shortcuts a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+.nav-chat-pill {
+  background: var(--crimson-gradient);
+  color: #ffffff !important;
+  padding: 8px 18px !important;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(168, 19, 50, 0.4);
+}
+
+.nav-chat-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 19, 50, 0.6);
+}
+
+.online-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #00E676;
+  box-shadow: 0 0 8px #00E676;
+}
+
+/* قسم المرافعة الكبرى (Hero Section) */
+.hero-palace {
+  padding: 70px 20px 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.royal-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--border-gold);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-gold);
+  margin-bottom: 20px;
+  box-shadow: var(--border-glow);
+}
+
+.hero-title {
+  font-family: var(--font-royal);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 26px;
+}
+
+.gold-gradient-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+/* بطاقة الصك القانوني العاطفي (Parchment Scroll) */
+.hero-scroll-card {
+  background: linear-gradient(180deg, #16203B 0%, #0D1426 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), var(--border-glow);
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.scroll-ornament-top, .scroll-ornament-bottom {
+  color: var(--gold-primary);
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.scroll-text {
+  font-family: var(--font-royal);
+  font-size: 21px;
+  line-height: 1.9;
+  color: #FFFDF9;
+  margin: 18px 0;
+  text-align: center;
+}
+
+.scroll-text strong {
+  color: var(--gold-light);
+  display: block;
+  margin-top: 10px;
+}
+
+.scroll-signature {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--text-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.scroll-signature strong {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: var(--font-royal);
+}
+
+.hero-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-royal-gold {
+  background: var(--gold-gradient);
+  color: #121829;
+  font-weight: 800;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-size: 15.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  cursor: pointer;
+}
+
+.btn-royal-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+.btn-royal-crimson {
+  background: var(--crimson-gradient);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 30px;
+  font-size: 15.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(168, 19, 50, 0.35);
+  cursor: pointer;
+}
+
+.btn-royal-crimson:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(168, 19, 50, 0.55);
+}
+
+/* ==========================================================================
+   3. قسم مواد دستور الحب
+   ========================================================================== */
+.constitution-section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.badge-gold {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--text-gold);
+  border: 1px solid var(--border-gold);
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-title-wrap h2 {
+  font-family: var(--font-royal);
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.section-title-wrap p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.law-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.law-card {
+  background: var(--bg-card);
+  border: 1.5px solid rgba(212, 175, 55, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.law-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 16px 40px rgba(212, 175, 55, 0.2);
+}
+
+.law-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--text-gold);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-gold);
+}
+
+.law-icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.law-card h3 {
+  font-family: var(--font-royal);
+  font-size: 21px;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+.law-card p {
+  font-size: 14.5px;
+  color: #D1D5DB;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   4. قسم صك الغزل والمرافعة اليومية
+   ========================================================================== */
+.decree-section {
+  padding: 40px 20px 60px 20px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.decree-box {
+  background: linear-gradient(135deg, rgba(22, 32, 59, 0.92) 0%, rgba(13, 20, 38, 0.95) 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: var(--radius-xl);
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), var(--border-glow);
+}
+
+.decree-seal {
+  width: 58px;
+  height: 58px;
+  background: var(--gold-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: -65px auto 16px auto;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+  border: 3px solid #080C18;
+}
+
+.decree-box h2 {
+  font-family: var(--font-royal);
+  font-size: 28px;
+  color: #ffffff;
+  margin: 8px 0 20px 0;
+}
+
+.quote-display-box {
+  background: rgba(7, 11, 22, 0.65);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  font-family: var(--font-royal);
+  font-size: 22px;
+  line-height: 1.85;
+  color: #FFFDF8;
+  margin-bottom: 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-generate-quote {
+  background: var(--gold-gradient);
+  color: #121829;
+  border: none;
+  font-weight: 800;
+  padding: 13px 28px;
+  border-radius: 25px;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-generate-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+}
+
+/* ==========================================================================
+   5. جناح المحادثة الذكي والحقيقي مع قيس (Chat Palace)
+   ========================================================================== */
+.chat-palace-section {
+  padding: 50px 20px 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.chat-palace-container {
+  background: var(--bg-card);
+  border: 2px solid var(--gold-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.7), var(--border-glow);
+  display: flex;
+  flex-direction: column;
+  height: 680px;
+}
+
+.chat-palace-header {
+  background: linear-gradient(135deg, #141F3A 0%, #0A1020 100%);
+  border-bottom: 1.5px solid var(--border-gold);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.chat-avatar-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.chat-online-beacon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00E676;
+  border: 2px solid #0A1020;
+  box-shadow: 0 0 8px #00E676;
+}
+
+.chat-header-text {
+  flex: 1;
+}
+
+.chat-header-text h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.chat-status {
+  font-size: 11.5px;
+  color: var(--text-gold);
+}
+
+.chat-reset-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.chat-reset-btn:hover {
+  background: rgba(212, 175, 55, 0.3);
+  transform: rotate(180deg);
+}
+
+/* شريط الاقتراحات السريعة */
+.quick-prompts-bar {
+  background: rgba(7, 11, 22, 0.6);
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prompts-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-gold);
+  white-space: nowrap;
+}
+
+.prompts-slider {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.prompts-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.prompt-chip {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #FCE897;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.prompt-chip:hover {
+  background: var(--gold-gradient);
+  color: #121829;
+  transform: translateY(-2px);
+}
+
+/* منطقة رسائل الشات */
+.chat-palace-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: radial-gradient(circle at top right, #111A33 0%, #090E1C 100%);
+  scroll-behavior: smooth;
+}
+
+.chat-palace-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-palace-messages::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+}
+
+.msg-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  animation: msg-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes msg-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* رسالة عليا (المستخدم) */
+.msg-row.user {
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.msg-row.user .msg-bubble {
+  background: var(--crimson-gradient);
+  color: #ffffff;
+  border-radius: 20px 4px 20px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: auto;
+  box-shadow: 0 4px 16px rgba(168, 19, 50, 0.4);
+}
+
+.msg-row.user .msg-time {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* رسالة قيس (المساعد) */
+.msg-row.bot {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+.msg-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.msg-row.bot .msg-bubble {
+  background: #141E38;
+  color: #F8FAFC;
+  border: 1.5px solid var(--border-gold);
+  border-radius: 4px 20px 20px 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  margin-left: auto;
+}
+
+.msg-bubble {
+  max-width: 82%;
+  padding: 14px 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.msg-time {
+  font-size: 10.5px;
+  margin-top: 5px;
+  color: var(--text-muted);
+}
+
+/* مؤشر الكتابة */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(14, 22, 42, 0.8);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 12.5px;
+  color: var(--text-gold);
+  margin-right: 44px;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.typing-dots div {
+  width: 6px;
+  height: 6px;
+  background: var(--gold-primary);
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-dots div:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots div:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* حقل الكتابة والإرسال */
+.chat-palace-input-box {
+  padding: 14px 20px;
+  background: #0E162B;
+  border-top: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-palace-input-box input {
+  flex: 1;
+  background: rgba(7, 11, 22, 0.85);
+  border: 1.5px solid var(--border-gold);
+  border-radius: 25px;
+  padding: 13px 20px;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.chat-palace-input-box input:focus {
+  border-color: var(--gold-light);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
+}
+
+.chat-palace-input-box input::placeholder {
+  color: #7988A8;
+  font-size: 13.5px;
+}
+
+.chat-send-heart-btn {
+  background: var(--crimson-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 25px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(168, 19, 50, 0.4);
+}
+
+.chat-send-heart-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(168, 19, 50, 0.6);
+}
+
+.send-heart {
+  font-size: 16px;
+  animation: pulse-heart 1.5s infinite;
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.chat-palace-footer-note {
+  font-size: 11px;
+  text-align: center;
+  color: #7583A2;
+  padding: 6px 0;
+  background: #090E1C;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* تذييل الصرح */
+.palace-footer {
+  text-align: center;
+  padding: 50px 20px 40px 20px;
+  border-top: 1px solid var(--border-gold);
+  background: #060912;
+}
+
+.footer-seal {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.palace-footer h3 {
+  font-family: var(--font-royal);
+  font-size: 22px;
+  color: var(--text-gold);
+  margin-bottom: 8px;
+}
+
+.palace-footer p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.footer-year {
+  font-size: 12px;
+  color: #7A87A5;
+}
+
+/* ==========================================================================
+   6. التجاوب الفائق مع شاشات الهواتف المحمولة
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-shortcuts a:not(.nav-chat-pill) {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .scroll-text {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .chat-palace-container {
+    height: 600px;
+  }
+
+  .chat-palace-input-box input {
+    font-size: 16px; /* يمنع الزووم في الآيفون */
+  }
+
+  .input-with-icon input {
+    font-size: 16px;
+  }
+}
