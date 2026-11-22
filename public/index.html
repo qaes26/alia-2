@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <meta name="theme-color" content="#090D1A">
+  <meta name="theme-color" content="#080C18">
   <title>سعادة المحامية عليا عبابنة ⚖️❤️ | نبض قلب قيس ودنيته كلها</title>
 
   <!-- خطوط جوجل: خط أميري الملكي + خط تجوال -->
@@ -82,6 +82,7 @@
           </div>
         </div>
 
+        <!-- روابط الديسكتوب -->
         <nav class="nav-shortcuts">
           <a href="#hero">المرافعة الكبرى</a>
           <a href="#constitution">دستور الحب</a>
@@ -93,6 +94,27 @@
         </nav>
       </div>
     </header>
+
+    <!-- شريط التنقل السفلي المخصص للهواتف المحمولة (Mobile App Bottom Bar) -->
+    <nav class="mobile-bottom-bar" id="mobileBottomBar">
+      <a href="#hero" class="mobile-nav-item active">
+        <span class="m-icon">🏛️</span>
+        <span class="m-label">المرافعة</span>
+      </a>
+      <a href="#constitution" class="mobile-nav-item">
+        <span class="m-icon">⚖️</span>
+        <span class="m-label">الدستور</span>
+      </a>
+      <a href="#decree" class="mobile-nav-item">
+        <span class="m-icon">📜</span>
+        <span class="m-label">صك الغزل</span>
+      </a>
+      <a href="#chatSection" class="mobile-nav-item chat-tab">
+        <span class="m-icon">💬</span>
+        <span class="m-label">شات قيس</span>
+        <span class="m-dot"></span>
+      </a>
+    </nav>
 
     <!-- القسم الرئيسي: مرافعة العشق الكبرى -->
     <section id="hero" class="hero-palace">
@@ -201,7 +223,7 @@
           </div>
           <div class="chat-header-text">
             <h3>قيس ❤️ سيدة قلبه عليا</h3>
-            <span class="chat-status">حبيبك متصل وينتظرك بلهفة وعشق • متصل الآن</span>
+            <span class="chat-status">حبيبك متصل وينتظرك بلهفة وعشق • متصل الآن 🟢</span>
           </div>
           <button class="chat-reset-btn" onclick="clearQaisChat();" title="إعادة بدء الحديث">
             🔄
@@ -210,19 +232,19 @@
 
         <!-- أزرار البدء السريع الخاصة بعليا -->
         <div class="quick-prompts-bar">
-          <span class="prompts-label">همسات سريعة لقيس:</span>
+          <span class="prompts-label">همسات سريعة:</span>
           <div class="prompts-slider">
             <button type="button" class="prompt-chip" onclick="sendQuickPrompt('قيس، تعبانة من قضايا ودراسة القانون اليوم.. 🥺');">
-              ⚖️ تعبانة من القانون اليوم..
+              ⚖️ تعبانة من القانون..
             </button>
             <button type="button" class="prompt-chip" onclick="sendQuickPrompt('احكيلي قديش بتحبني يا روحي؟ ❤️');">
-              ❤️ قديش بتحبني يا روحي؟
+              ❤️ قديش بتحبني؟
             </button>
             <button type="button" class="prompt-chip" onclick="sendQuickPrompt('شو رأيك فيّ وأنا محامية ولابسة الروب؟ 💼');">
-              💼 شو رأيك فيّ وأنا بالروب؟
+              💼 رأيك فيّ بالروب؟
             </button>
             <button type="button" class="prompt-chip" onclick="sendQuickPrompt('احكيلي كلام حلو ينسيني تعب الدنيا كلها! ✨');">
-              👑 احكيلي غزل ينسيني تعب الدنيا!
+              👑 احكيلي غزل ينسيني تعبي!
             </button>
             <button type="button" class="prompt-chip" onclick="sendQuickPrompt('شو حكم المحكمة الصادر بحقك اليوم يا قيس؟ 💍');">
               💍 شو حكم محكمتك اليوم؟

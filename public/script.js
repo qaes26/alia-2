@@ -271,4 +271,40 @@
     }
   });
 
+  // 6. مراقبة التمرير وتحديث شريط التنقل السفلي في الهاتف
+  const sections = document.querySelectorAll('section[id]');
+  const navItems = document.querySelectorAll('.mobile-nav-item');
+
+  function updateActiveNavItem() {
+    let currentId = '';
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop - 130;
+      const secHeight = sec.offsetHeight;
+      if (scrollY >= secTop && scrollY < secTop + secHeight) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${currentId}`) {
+          item.classList.add('active');
+        }
+      });
+    }
+  }
+  window.addEventListener('scroll', updateActiveNavItem);
+
+  // 7. ضبط التمرير عند ظهور لوحة مفاتيح الهاتف
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', () => {
+      if (messagesContainer) {
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+    });
+  }
+
 })();
